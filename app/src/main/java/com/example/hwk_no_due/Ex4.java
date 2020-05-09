@@ -30,6 +30,7 @@ public class Ex4 extends AppCompatActivity implements MusicIn4Adapter.MusicIn4Ho
     private long millis;
     private int totalSecond ;
     private SeekBar seekBar;
+    private String tempDuration;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +78,7 @@ public class Ex4 extends AppCompatActivity implements MusicIn4Adapter.MusicIn4Ho
         seekBar.setProgress(0);
         timeCurrent.setText(musicHolders.get(position).getDuration());
         String time = timeCurrent.getText().toString();
+        tempDuration = time;
         String[] s = time.split(":");
         int minute = Integer.parseInt(s[0]);
         int remainSecond = Integer.parseInt(s[1]);
@@ -92,12 +94,10 @@ public class Ex4 extends AppCompatActivity implements MusicIn4Adapter.MusicIn4Ho
             @Override
             public void onTick(long millisUntilFinished) {
                 int current = seekBar.getProgress();
-
-                if(current>=seekBar.getMax()){
-                    current=0;
+                seekBar.setProgress(current+1);
+                if(seekBar.getProgress()==seekBar.getMax()){
                     seekBar.setProgress(0);
                 }
-                seekBar.setProgress(current+1);
                 millis = millis-1000;
                 long minutes = TimeUnit.MILLISECONDS.toMinutes(millis);
                 int seconds = (int)((millis / 1000) % 60);
