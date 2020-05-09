@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/feed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elevation="5dp"
+        android:background="@drawable/border"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/trap"
+            android:layout_marginTop="4dp"
+           />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nguyễn Khắc Phúc"
+            android:layout_toRightOf="@+id/avatar"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20sp"
+            android:textColor="#FE5196"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:text="Today, 1:45PM"
+            android:layout_toRightOf="@+id/avatar"
+            android:layout_marginLeft="20dp"/>
+        <ImageView
+            android:id="@+id/menu_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_black"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/time"
+            android:scaleType="fitXY"
+            android:src="@drawable/picture"
+            android:layout_marginTop="10dp"
+
+           />
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:text="Actually HTML text usually gets formatted using Cascading Style Sheets (CSS)"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>

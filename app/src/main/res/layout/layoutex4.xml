@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgr">
+
+    <RelativeLayout
+        android:id="@+id/currentStatusSongBar"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="#80000000">
+
+        <ImageView
+            android:id="@+id/state"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/ic_interface" />
+
+        <TextView
+            android:id="@+id/playlistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/state"
+            android:text="Playlist Name"
+            android:textColor="#FFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playlistName"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/state"
+            android:text="56 songs"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/timeCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/state"
+            android:text="36:45"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/like" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-80dp"
+            android:layout_marginBottom="14dp"
+            android:layout_toRightOf="@+id/like"
+            android:src="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_toRightOf="@+id/heart"
+            android:src="@drawable/ic_share" />
+    </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/seekbar_holder"
+      android:layout_width="match_parent"
+      android:layout_height="12dp"
+      android:layout_below="@id/currentStatusSongBar"
+      android:background="#80000000"
+    >
+      <SeekBar
+          android:id="@+id/seekbar"
+          android:layout_width="match_parent"
+          android:layout_height="12dp"
+          android:layout_alignParentBottom="true"
+          android:background="#10000000"
+          android:max="100"
+          android:thumbTint="@android:color/holo_red_light"
+          />
+  </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listTrack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar_holder"/>
+</RelativeLayout>

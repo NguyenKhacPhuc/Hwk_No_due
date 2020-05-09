@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#80000000">
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/illenium"
+        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:id="@+id/songName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SongName"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/background_light"/>
+    <TextView
+        android:id="@+id/artistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ILLENIUM"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/songName"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:textColor="@android:color/background_light"/>
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3:42"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="60dp"
+        android:textColor="@android:color/background_light"/>
+    <ImageView
+        android:id="@+id/playic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play"
+        android:layout_toRightOf="@+id/duration"
+        android:layout_marginLeft="-40dp"
+        android:layout_marginTop="37dp"/>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:background="#50000000"/>
+
+
+</RelativeLayout>
