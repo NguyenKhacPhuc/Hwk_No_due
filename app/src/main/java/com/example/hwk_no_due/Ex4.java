@@ -96,14 +96,8 @@ public class Ex4 extends AppCompatActivity implements MusicIn4Adapter.MusicIn4Ho
 
                 if(current>=seekBar.getMax()){
                     current=0;
-                   onStop();
-                }else if(current < 0){
-                    current=0;
-                    seekBar.setProgress(current);
                 }
-                else{
-                    seekBar.setProgress(current++);
-                }
+                seekBar.setProgress(current+1);
 
                 millis = millis-1000;
                 long minutes = TimeUnit.MILLISECONDS.toMinutes(millis);
