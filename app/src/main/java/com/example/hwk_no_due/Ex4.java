@@ -30,6 +30,9 @@ public class Ex4 extends AppCompatActivity implements MusicIn4Adapter.MusicIn4Ho
     private long millis;
     private int totalSecond ;
     private SeekBar seekBar;
+
+    private CountDownTimer countDownTimer;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +92,12 @@ public class Ex4 extends AppCompatActivity implements MusicIn4Adapter.MusicIn4Ho
         playlistName.setText(musicHolders.get(position).getSongName());
         quantity.setText(musicHolders.get(position).getArtist());
         state.setImageResource(musicHolders.get(position).getThumbnail());
-        CountDownTimer countDownTimer = new CountDownTimer(millis,1000) {
+
+        if(countDownTimer != null){
+            countDownTimer.cancel();
+        }
+
+        countDownTimer = new CountDownTimer(millis,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 int current = seekBar.getProgress();
