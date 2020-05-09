@@ -72,7 +72,6 @@ public class Ex4 extends AppCompatActivity implements MusicIn4Adapter.MusicIn4Ho
     }
     @Override
     public void onClick(int position) {
-
         totalSecond = 0;
         millis = 0;
         seekBar.setProgress(0);
@@ -96,9 +95,9 @@ public class Ex4 extends AppCompatActivity implements MusicIn4Adapter.MusicIn4Ho
 
                 if(current>=seekBar.getMax()){
                     current=0;
+                    seekBar.setProgress(0);
                 }
                 seekBar.setProgress(current+1);
-
                 millis = millis-1000;
                 long minutes = TimeUnit.MILLISECONDS.toMinutes(millis);
                 int seconds = (int)((millis / 1000) % 60);
