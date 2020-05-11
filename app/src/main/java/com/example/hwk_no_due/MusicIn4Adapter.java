@@ -69,7 +69,6 @@ public class MusicIn4Adapter extends RecyclerView.Adapter<MusicIn4Adapter.MusicI
         @Override
         public void onClick(View v) {
             onItemListener.onClick(getAdapterPosition());
-
         }
         public interface onItemListener{
             void onClick(int position);
