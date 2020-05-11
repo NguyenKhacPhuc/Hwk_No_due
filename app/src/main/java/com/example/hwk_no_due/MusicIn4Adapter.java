@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class MusicIn4Adapter extends RecyclerView.Adapter<MusicIn4Adapter.MusicIn4Holder> {
-    private ArrayList<MusicHolder> musicHolders;
+    private static ArrayList<MusicHolder> musicHolders;
     private Context context;
     private MusicIn4Holder.onItemListener onItemListener;
     public MusicIn4Adapter(ArrayList<MusicHolder> musicHolders, Context context, MusicIn4Holder.onItemListener onItemListener){
@@ -38,9 +38,7 @@ public class MusicIn4Adapter extends RecyclerView.Adapter<MusicIn4Adapter.MusicI
             holder.thumbnail.setImageResource(mH.getThumbnail());
             holder.artistName.setText(mH.getArtist());
             holder.duration.setText(mH.getDuration());
-            if(!mH.isPlay()){
-                holder.playic.setImageResource(R.drawable.ic_play);
-            }
+            holder.playic.setImageResource(R.drawable.ic_play);
     }
 
     @Override
@@ -69,6 +67,14 @@ public class MusicIn4Adapter extends RecyclerView.Adapter<MusicIn4Adapter.MusicI
         @Override
         public void onClick(View v) {
             onItemListener.onClick(getAdapterPosition());
+            if(musicHolders.get(getAdapterPosition()).isPlay()){
+                playic.setImageResource(R.drawable.ic_pause);
+                musicHolders.get(getAdapterPosition()).setPlay(false);
+            }
+            else {
+                playic.setImageResource(R.drawable.ic_play);
+                musicHolders.get(getAdapterPosition()).setPlay(true);
+            }
         }
         public interface onItemListener{
             void onClick(int position);

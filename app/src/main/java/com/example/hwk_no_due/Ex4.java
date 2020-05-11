@@ -114,15 +114,15 @@ public class Ex4 extends AppCompatActivity implements MusicIn4Adapter.MusicIn4Ho
 
     public ArrayList<MusicHolder> insertData(){
         ArrayList<MusicHolder> musicHolders = new ArrayList<>();
-        musicHolders.add(new MusicHolder(R.drawable.illenium,"Good things fall apart","Illenium","3:43",false));
-        musicHolders.add(new MusicHolder(R.drawable.lana,"Flipside(Illenium remix)","Lana Del Rey","5:00",false));
-        musicHolders.add(new MusicHolder(R.drawable.sharkmusic,"Oh Wonder(Illenium remix)","Shark","5:07",false));
+        musicHolders.add(new MusicHolder(R.drawable.illenium,"Good things fall apart","Illenium","3:43",true));
+        musicHolders.add(new MusicHolder(R.drawable.lana,"Flipside(Illenium remix)","Lana Del Rey","5:00",true));
+        musicHolders.add(new MusicHolder(R.drawable.sharkmusic,"Oh Wonder(Illenium remix)","Shark","5:07",true));
         musicHolders.add(new MusicHolder(R.drawable.fractures,"Fractures","Illenium","4:06",false));
-        musicHolders.add(new MusicHolder(R.drawable.gold,"Gold Dust(Illenium Remix)","Galantis","3:43",false));
-        musicHolders.add(new MusicHolder(R.drawable.ascend,"In Your Arms","Illenium","4:11",false));
+        musicHolders.add(new MusicHolder(R.drawable.gold,"Gold Dust(Illenium Remix)","Galantis","3:43",true));
+        musicHolders.add(new MusicHolder(R.drawable.ascend,"In Your Arms","Illenium","4:11",true));
         musicHolders.add(new MusicHolder(R.drawable.lonely,"Lonely","Illenium","5:13",false));
-        musicHolders.add(new MusicHolder(R.drawable.crahshing,"Crashing","Illenium","3:52",false));
-        musicHolders.add(new MusicHolder(R.drawable.takeyoudown,"Take You Down","Illenium","3:50",false));
+        musicHolders.add(new MusicHolder(R.drawable.crahshing,"Crashing","Illenium","3:52",true));
+        musicHolders.add(new MusicHolder(R.drawable.takeyoudown,"Take You Down","Illenium","3:50",true));
         return musicHolders;
     }
     public void reflectView(){
